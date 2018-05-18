@@ -18,7 +18,7 @@
     <link href="{{asset('css/pages.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/menu.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/responsive.css')}}" rel="stylesheet" type="text/css"/>
-    <link href={{asset('plugins/switchery/switchery.min.css')}}rel="stylesheet">
+    <link href="{{asset('plugins/switchery/switchery.min.css')}}"rel="stylesheet">
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,15 +51,15 @@
 <script src="{{asset('js/waves.js')}}"></script>
 <script src="{{asset('js/jquery.slimscroll.js')}}"></script>
 <script src="{{asset('js/jquery.scrollTo.min.js')}}"></script>
-<script src="{{asset('plugins/switchery/switchery.min.js')}}'"></script>
+<script src="{{asset('plugins/switchery/switchery.min.js')}}"></script>
 
 <!-- Counter js  -->
-<script src="{{asset('plugins/waypoints/jquery.waypoints.min.js')}}'"></script>
-<script src="{{asset('plugins/counterup/jquery.counterup.min.js')}}'"></script>
+<script src="{{asset('plugins/waypoints/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('plugins/counterup/jquery.counterup.min.js')}}"></script>
 
 <!--Morris Chart-->
-<script src="{{asset('plugins/morris/morris.min.js')}}'"></script>
-<script src="{{asset('plugins/raphael/raphael-min.js')}}'"></script>
+<script src="{{asset('plugins/morris/morris.min.js')}}"></script>
+<script src="{{asset('plugins/raphael/raphael-min.js')}}"></script>
 
 <!-- Dashboard init -->
 <script src="{{asset('pages/jquery.dashboard.js')}}"></script>
