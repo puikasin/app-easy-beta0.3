@@ -19,13 +19,15 @@
 
                                 <div class="form-group ">
                                     <div class="col-xs-12">
-                                        <input class="form-control" type="email" required placeholder="Email" id="email" name="email" v-model="form.email">
+                                        <input class="form-control" type="email" required placeholder="Email" id="email"
+                                               name="email" v-model="form.email">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="col-xs-12">
-                                        <input class="form-control" type="password" required placeholder="Password" id="password" name="password" v-model="form.password">
+                                        <input class="form-control" type="password" required placeholder="Password"
+                                               id="password" name="password" v-model="form.password">
                                     </div>
                                 </div>
 
@@ -67,9 +69,11 @@
 
                     <div class="row m-t-50">
                         <div class="col-sm-12 text-center">
-                            <p class="text-muted">Don't have an account? <a href="page-register.html"
-                                                                            class="text-primary m-l-5"><b>Sign
-                                Up</b></a></p>
+                            <p class="text-muted">Don't have an account?
+                                <router-link to="/signup">
+                                    <a class="text-primary m-l-5"><b>Sign Up</b></a>
+                                </router-link>
+                            </p>
                         </div>
                     </div>
 
@@ -92,12 +96,14 @@
                 }
             }
         },
+        created() {
+            if (User.loggedIn()) {
+                this.$router.push({name: 'forum'})
+            }
+        },
         methods: {
             login() {
-                //alert('login')
-                axios.post('/api/auth/login',this.form)
-                    .then(res => console.log(res.date))
-                    .catch(error => console.log(error.response.data))
+                User.login(this.form)
             }
         }
     }

@@ -1,7 +1,9 @@
 <template>
     <div>
-        <toolbar></toolbar>
-        <app-menu></app-menu>
+        <div v-if="username">
+            <toolbar></toolbar>
+            <app-menu></app-menu>
+        </div>
         <router-view></router-view>
     </div>
 
@@ -16,7 +18,13 @@
 
 
     export default {
-        components: {Login, AppMenu, Toolbar}
+        components: {Login, AppMenu, Toolbar},
+        data() {
+            return {
+                username: User.name()
+            }
+        }
+
     }
 </script>
 
