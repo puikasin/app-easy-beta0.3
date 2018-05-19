@@ -4,6 +4,7 @@
             <toolbar></toolbar>
             <app-menu></app-menu>
         </div>
+        
         <router-view></router-view>
     </div>
 

@@ -20,8 +20,9 @@ class QuestionController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('JWT', ['except' => ['index','show']]);
+        $this->middleware('JWT', ['except' => ['index', 'show']]);
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -40,9 +41,9 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-//        auth()->user()->question()->create($request->all());
-       Question::create($request->all());
-        return response('Created', Response::HTTP_CREATED);
+
+        $question = auth()->user()->question()->create($request->all());
+        return response(new QuestionResource($question), Response::HTTP_CREATED);
 
     }
 
@@ -54,7 +55,7 @@ class QuestionController extends Controller
      */
     public function show(Question $question)
     {
-        return new QuestionResource($question) ;
+        return new QuestionResource($question);
     }
 
     /**

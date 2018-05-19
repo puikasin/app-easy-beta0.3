@@ -9,13 +9,19 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Vue from 'vue'
 
+
+import VueSimplemde from 'vue-simplemde'
+Vue.use(VueSimplemde)
+import md from 'marked'
+window.md=md
+
 import User from './Helpers/User'
 window.User = User
 
 window.EventBus = new Vue();
 
 import VueRouter from 'vue-router'
- console.log(User.loggedIn())
+ // console.log(User.loggedIn())
 
 Vue.use(VueRouter)
 
